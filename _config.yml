@@ -91,7 +91,7 @@ analytics:
 # Site Author
 author:
   name             : "Duncan Kinnear"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/bio-photo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Geoscientist, Photographer, Outdoors Enthusiast."
   location         : "Morzine, France"
   email            :
