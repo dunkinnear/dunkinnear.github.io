@@ -13,13 +13,13 @@
 {% endif %}
 
 {% if site.search == true or page.layout == "search" %}
-  {%- assign search_provider = site.search_provider | default: "lunr" -%}
-  {%- case search_provider -%}
-    {%- when "lunr" -%}
+  {% assign search_provider = site.search_provider | default: "lunr" %}
+  {% case search_provider %}
+    {% when "lunr" %}
       {% include search/lunr-search-scripts.html %}
-    {%- when "algolia" -%}
+    {% when "algolia" %}
       {% include search/algolia-search-scripts.html %}
-  {%- endcase -%}
+  {% endcase %}
 {% endif %}
 
 {% include analytics.html %}
