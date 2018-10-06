@@ -13,7 +13,7 @@ title                    : "Site Title"
 title_separator          : "-"
 name                     : "Duncan Kinnear"
 description              : "Earth, Maps, Data."
-url                      : "https://dunkinnear.github.io/" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "http://127.0.0.1:4000" #"https://dunkinnear.github.io/" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : dunkinnear/dunkinnear.github.io # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -92,8 +92,8 @@ analytics:
 author:
   name             : "Duncan Kinnear"
   avatar           : "/assets/images/bio-photo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Earth, Maps, Data Bio."
-  location         : "Morzine, France"
+  bio              : "Earth, Maps, Data."
+  location         : "Scotland"
   email            : "d.a.kinnear@gmail.com"
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"
@@ -193,12 +193,13 @@ timezone: Europe/London # https://en.wikipedia.org/wiki/List_of_tz_database_time
 
 
 # Plugins (previously gems:)
-plugins:
+plugins_dir:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
   - jemoji
+
 
 # mimic GitHub Pages with --safe
 whitelist:
