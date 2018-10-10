@@ -22,4 +22,4 @@ map.on('load', function() {
 });
 map.addControl(new mapboxgl.FullscreenControl());
 
-alert("WORKING");
+// alert("WORKING");
