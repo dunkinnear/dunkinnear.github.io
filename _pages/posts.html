@@ -1,0 +1,44 @@
+---
+layout: single
+author_profile: true
+permalink: /posts/
+---
+<!-- <ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      {{ post.excerpt }}
+    </li>
+  {% endfor %}
+</ul> -->
+<!-- <ul>
+	{% for post in site.posts %}
+		<li>
+
+		    {% capture day %}{{ post.date | date: '%m%d%Y' }}{% endcapture %}
+		    {% capture nday %}{{ post.next.date | date: '%m%d%Y' }}{% endcapture %}
+
+		    {% if day != nday %}
+		        <h5 class="date">{{ post.date | date: "%A, %B %e, %Y" }}</h5>
+		    {% endif %}
+		    <a href="{{ post.url }}">{{ post.title }}</a>
+		    {{ post.excerpt }}
+		    <hr>
+		</li>
+
+	{% endfor %}
+</ul> -->
+
+<ul>
+{% for post in site.posts %}
+	{% capture month %}{{ post.date | date: '%m%Y' }}{% endcapture %}
+	{% capture nmonth %}{{ post.next.date | date: '%m%Y' }}{% endcapture %}
+		{% if month != nmonth %}
+			{% if forloop.index != 1 %}</ul>{% endif %}
+			<h3>{{ post.date | date: '%B %Y' }}</h3><ul>
+		{% endif %}
+	<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+	<i><time>{{ post.date | date: "%e %B %Y" }}</time></i>
+	{{ post.excerpt }}
+{% endfor %}
+</ul>
