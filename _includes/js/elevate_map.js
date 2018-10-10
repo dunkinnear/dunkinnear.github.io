@@ -4,7 +4,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiZHVua2lubmVhciIsImEiOiJjaWhsem4wc3gwMGR0dXNrc
 
 var map = new mapboxgl.Map({
   container: 'map',
-  style: 'mapbox://styles/mapbox/light-v9',
+  style: 'mapbox://styles/mapbox/satellite-v9',
   
   center: [-104.19, 47.77],
   zoom: 10
