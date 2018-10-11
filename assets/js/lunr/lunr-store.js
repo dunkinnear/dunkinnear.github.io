@@ -17,11 +17,37 @@ var store = [
       {
         "title": {{ doc.title | jsonify }},
         "excerpt":
+<<<<<<< HEAD
           {% if site.search_full_content == true %}
             {{ doc.content | strip_html | strip_newlines | jsonify }},
           {% else %}
             {{ doc.content | strip_html | strip_newlines | truncatewords: 50 | jsonify }},
           {% endif %}
+=======
+          {%- if site.search_full_content == true -%}
+            {{ doc.content | newline_to_br |
+              replace:"<br />", " " |
+              replace:"</p>", " " |
+              replace:"</h1>", " " |
+              replace:"</h2>", " " |
+              replace:"</h3>", " " |
+              replace:"</h4>", " " |
+              replace:"</h5>", " " |
+              replace:"</h6>", " "|
+            strip_html | strip_newlines | jsonify }},
+          {%- else -%}
+            {{ doc.content | newline_to_br |
+              replace:"<br />", " " |
+              replace:"</p>", " " |
+              replace:"</h1>", " " |
+              replace:"</h2>", " " |
+              replace:"</h3>", " " |
+              replace:"</h4>", " " |
+              replace:"</h5>", " " |
+              replace:"</h6>", " "|
+            strip_html | strip_newlines | truncatewords: 50 | jsonify }},
+          {%- endif -%}
+>>>>>>> mmistakes/master
         "categories": {{ doc.categories | jsonify }},
         "tags": {{ doc.tags | jsonify }},
         "url": {{ doc.url | absolute_url | jsonify }},
