@@ -21,7 +21,7 @@ title_separator          : "|"
 name                     : "Duncan Kinnear"
 description              : "GIS, Maps, Data, Visualisation."
 url                      : "https://dunkinnear.github.io/" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : # the subpath of your site, e.g. "/blog"
+baseurl                  : "/" # the subpath of your site, e.g. "/blog"
 
 repository               : "dunkinnear/dunkinnear.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : "/assets/images/suilven.png"# path of fallback teaser image, e.g. "/assets/images/suilven.png"
