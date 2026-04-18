@@ -1,0 +1,81 @@
+baseURL = "https://dunkinnear.github.io/"
+title = "Duncan Kinnear"
+theme = "PaperMod"
+languageCode = "en-AU"
+enableRobotsTXT = true
+enableRSS = true
+
+[pagination]
+  pagerSize = 5
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+  description = "GIS, Maps, Data, Visualisation."
+  author = "Duncan Kinnear"
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+
+  [params.homeInfoParams]
+    Title = "Duncan Kinnear"
+    Content = "Geo-data-scientist based in Perth, Australia. GIS, Maps, Data, Visualisation."
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/dunkinnear"
+
+  [[params.socialIcons]]
+    name = "twitter"
+    url = "https://twitter.com/duncankinnear"
+
+  [[params.socialIcons]]
+    name = "instagram"
+    url = "https://instagram.com/dunkinnear"
+
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:d.a.kinnear@gmail.com"
+
+  [params.assets]
+    favicon = "/images/bio-photo.jpg"
+
+  [params.verification]
+    google = "google3d49235187d3b432"
+    bing = "0FC3FD70512616B052E755A56F8952D"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[menu]
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 1
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 2
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 3
+  [[menu.main]]
+    name = "Search"
+    url = "/search/"
+    weight = 4
+
+[params.fuseOpts]
+  isCaseSensitive = false
+  shouldSort = true
+  location = 0
+  distance = 1000
+  threshold = 0.4
+  minMatchCharLength = 0
+  keys = ["title", "permalink", "summary", "content"]
