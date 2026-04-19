@@ -4,6 +4,7 @@ theme = "PaperMod"
 languageCode = "en-AU"
 enableRobotsTXT = true
 enableRSS = true
+comments = true
 
 [pagination]
   pagerSize = 5
@@ -14,7 +15,7 @@ enableRSS = true
       unsafe = true
 
 [params]
-  description = "GIS, Maps, Data, Visualisation."
+  description = "GIS, Remote Sensing, Data, Visualisation."
   author = "Duncan Kinnear"
   defaultTheme = "auto"
   ShowReadingTime = true
@@ -32,8 +33,8 @@ enableRSS = true
     url = "https://github.com/dunkinnear"
 
   [[params.socialIcons]]
-    name = "twitter"
-    url = "https://twitter.com/duncankinnear"
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/duncan-kinnear/"
 
   [[params.socialIcons]]
     name = "instagram"

@@ -12,5 +12,5 @@ Feel free to reach out via email: [d.a.kinnear@gmail.com](mailto:d.a.kinnear@gma
 
 You can also find me on:
 - [GitHub](https://github.com/dunkinnear)
-- [Twitter](https://twitter.com/duncankinnear)
-- [Instagram](https://instagram.com/dunkinnear)
+- [LinkedIn](https://www.linkedin.com/in/duncan-kinnear/)
+- [Instagram](https://www.instagram.com/dunkinnear/)

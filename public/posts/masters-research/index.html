@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Masters Research | Duncan Kinnear</title>
+<meta name="keywords" content="python, masters, GIS, glaciology, computer vision">
+<meta name="description" content="Automated crevasse detection on a calving glacier.
+
+In 2015 I undertook some research for my Masters dissertation while studying GIS at the University of Edinburgh. I chose a project under the supervision of Nick Hulton, a glaciologist and Python expert. The research was closely linked to the CRIOS project (led by Prof. Doug Benn at the University Centre in Svalbard (UNIS) at the time), which was set up to investigate the use of time-lapse photography in understanding calving behaviour by deriving short-term glacier velocity fluctuations and calving rates - mainly through the use of computer vision algorithms using the OpenCV Python library, among others.
+">
+<meta name="author" content="Duncan Kinnear">
+<link rel="canonical" href="https://dunkinnear.github.io/posts/masters-research/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.47e51c7d8489b002361bac156ce9a0a8776d08c5462c2cee95801efafdd90d35.css" integrity="sha256-R&#43;UcfYSJsAI2G6wVbOmgqHdtCMVGLCzulYAe&#43;v3ZDTU=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://dunkinnear.github.io/images/bio-photo.jpg">
+<link rel="icon" type="image/png" sizes="16x16" href="https://dunkinnear.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://dunkinnear.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://dunkinnear.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://dunkinnear.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://dunkinnear.github.io/posts/masters-research/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><meta property="og:url" content="https://dunkinnear.github.io/posts/masters-research/">
+  <meta property="og:site_name" content="Duncan Kinnear">
+  <meta property="og:title" content="Masters Research">
+  <meta property="og:description" content="Automated crevasse detection on a calving glacier.
+In 2015 I undertook some research for my Masters dissertation while studying GIS at the University of Edinburgh. I chose a project under the supervision of Nick Hulton, a glaciologist and Python expert. The research was closely linked to the CRIOS project (led by Prof. Doug Benn at the University Centre in Svalbard (UNIS) at the time), which was set up to investigate the use of time-lapse photography in understanding calving behaviour by deriving short-term glacier velocity fluctuations and calving rates - mainly through the use of computer vision algorithms using the OpenCV Python library, among others.">
+  <meta property="og:locale" content="en_AU">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2018-03-12T00:00:00+00:00">
+    <meta property="article:modified_time" content="2018-03-12T00:00:00+00:00">
+    <meta property="article:tag" content="Python">
+    <meta property="article:tag" content="Masters">
+    <meta property="article:tag" content="GIS">
+    <meta property="article:tag" content="Glaciology">
+    <meta property="article:tag" content="Computer Vision">
+    <meta property="og:image" content="https://dunkinnear.github.io/images/research/20130804.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://dunkinnear.github.io/images/research/20130804.png">
+  <meta name="twitter:title" content="Masters Research">
+  <meta name="twitter:description" content="Automated crevasse detection on a calving glacier.
+In 2015 I undertook some research for my Masters dissertation while studying GIS at the University of Edinburgh. I chose a project under the supervision of Nick Hulton, a glaciologist and Python expert. The research was closely linked to the CRIOS project (led by Prof. Doug Benn at the University Centre in Svalbard (UNIS) at the time), which was set up to investigate the use of time-lapse photography in understanding calving behaviour by deriving short-term glacier velocity fluctuations and calving rates - mainly through the use of computer vision algorithms using the OpenCV Python library, among others.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://dunkinnear.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Masters Research",
+      "item": "https://dunkinnear.github.io/posts/masters-research/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Masters Research",
+  "name": "Masters Research",
+  "description": "Automated crevasse detection on a calving glacier.\nIn 2015 I undertook some research for my Masters dissertation while studying GIS at the University of Edinburgh. I chose a project under the supervision of Nick Hulton, a glaciologist and Python expert. The research was closely linked to the CRIOS project (led by Prof. Doug Benn at the University Centre in Svalbard (UNIS) at the time), which was set up to investigate the use of time-lapse photography in understanding calving behaviour by deriving short-term glacier velocity fluctuations and calving rates - mainly through the use of computer vision algorithms using the OpenCV Python library, among others. ",
+  "keywords": [
+    "python", "masters", "GIS", "glaciology", "computer vision"
+  ],
+  "articleBody": "Automated crevasse detection on a calving glacier.\nIn 2015 I undertook some research for my Masters dissertation while studying GIS at the University of Edinburgh. I chose a project under the supervision of Nick Hulton, a glaciologist and Python expert. The research was closely linked to the CRIOS project (led by Prof. Doug Benn at the University Centre in Svalbard (UNIS) at the time), which was set up to investigate the use of time-lapse photography in understanding calving behaviour by deriving short-term glacier velocity fluctuations and calving rates - mainly through the use of computer vision algorithms using the OpenCV Python library, among others. My particular research used a similar approach, but using satellite images rather than high-resolution cameras. The imagery was provided by Adrian Luckman at Swansea University, also involved with the CRIOS project, and consisted of a series of pre-processed TerraSAR-X Radar images taken between 2013 and 2014 with an 11-day repeat cycle. These images have the advantage of near-global coverage at a relatively high resolution, and are not affected by cloud cover/inclement weather, providing an incredibly useful resource to monitor earth surface processes, including glaciers. Having that consistent repeat cycle was important for the approach we took to measure the movement of the glacier, using computer vision algorithms to track the movement of ‘unique’ pixel patterns on the glacier between image pairs, where a longer period of time may have lost many of the pixel patterns due to surface change.\nTime-lapse of Tunabreen glacier The second major challenge was to delineate the major crevasses on the glacier, to allow measurement of the crevasse and inter-crevasse widths. The was done using a combination of image-processing techniques, including a Lee filter and contrast enhancement, before applying a Canny edge detector using OpenCV. We wanted to pick out the major crevasses but not minor cracks and undulations on the surface.\nExample of Lee filter applied to a TerraSAR-X image The main steps in the final workflow were as follows:\nCrop image to area of interest Apply Lee filter to remove speckle, and image enhacement to help delineate crevasse edges. Detect crevasse edges using a Canny edge detector. Create points along crevasse edges, and track movement of unique pixel patterns between image pairs Calculate strain rates based on this movement, and compare 'intra-crevasse' and 'inter-crevasse' movement to assess crevasse opening/closing. Detected crevasse edges and extension vectors Output strain rate chart example I had only started learning Python a few months earlier, but I soon found out how powerful it can be, and relatively easy to learn for someone without a background in computer science. Not only that, but the way that Python can link together so many varied pieces of software through libraries and bindings, into one easy-to-read script or program, makes it the go-to language for geoprocessing. I wanted to try and use open-source software exclusively for this project, and the main Python libraries and software I used were:\nGDAL/OGR for reading and writing of raster/vector data sets GRASS GIS Python bindings for some vector tools to help build crevasse edges PyRadar to filter the images OpenCV to apply image enhancement, edge detection and calculate movement between image pairs. Pandas to process and store data, and Pandas/Matplotlib to visualise results For an overview of the research and some further reading see the web showcase here. The final research paper went on to win a UK-wide award from the Royal Geographical Society (with IBG). Feel free to get in touch for more information on the methods I used.\nThe research paper is available on ResearchGate.\n",
+  "wordCount" : "594",
+  "inLanguage": "en",
+  "image":"https://dunkinnear.github.io/images/research/20130804.png","datePublished": "2018-03-12T00:00:00Z",
+  "dateModified": "2018-03-12T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Duncan Kinnear"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://dunkinnear.github.io/posts/masters-research/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Duncan Kinnear",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://dunkinnear.github.io/images/bio-photo.jpg"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="header-nav">
+        <div class="logo">
+            <a href="https://dunkinnear.github.io/" accesskey="h" title="Duncan Kinnear (Alt + H)">Duncan Kinnear</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu" class="menu">
+            <li>
+                <a href="https://dunkinnear.github.io/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://dunkinnear.github.io/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://dunkinnear.github.io/contact/" title="Contact">
+                    <span>Contact</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://dunkinnear.github.io/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <nav class="breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    <a href='https://dunkinnear.github.io/'>Home</a>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+            <a href="https://dunkinnear.github.io/posts/">Posts</a></nav>
+    <h1 class="post-title entry-hint-parent">
+      Masters Research
+    </h1>
+    <div class="post-meta"><span title='2018-03-12 00:00:00 +0000 UTC'>March 12, 2018</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>Duncan Kinnear</span>
+
+</div>
+  </header> 
+<figure class="entry-cover">
+        <img loading="eager" src="https://dunkinnear.github.io/images/research/20130804.png" alt="">
+        
+</figure>
+  <div class="post-content md-content"><p><b>Automated crevasse detection on a calving glacier</b>.</p>
+<p>
+In 2015 I undertook some research for my Masters dissertation while studying GIS at the University of Edinburgh. I chose a project under the supervision of Nick Hulton, a glaciologist and Python expert. The research was closely linked to the <a href="https://crios.pl/project/" target="_blank">CRIOS</a> project (led by Prof. Doug Benn at the University Centre in Svalbard (UNIS) at the time), which was set up to investigate the use of time-lapse photography in understanding calving behaviour by deriving short-term glacier velocity fluctuations and calving rates - mainly through the use of computer vision algorithms using the <a href="https://opencv.org/" target="_blank">OpenCV</a> Python library, among others.
+</p>
+<figure>
+  <img src="/images/research/ROI.png" alt="Region of interest" itemprop="image">
+</figure>
+<p>My particular research used a similar approach, but using satellite images rather than high-resolution cameras. The imagery was provided by Adrian Luckman at Swansea University, also involved with the CRIOS project, and consisted of a series of pre-processed <a href="https://dataspace.copernicus.eu/explore-data/data-collections/copernicus-contributing-missions/missions/TerraSar-X" target="_blank">TerraSAR-X</a> Radar images taken between 2013 and 2014 with an 11-day repeat cycle. These images have the advantage of near-global coverage at a relatively high resolution, and are not affected by cloud cover/inclement weather, providing an incredibly useful resource to monitor earth surface processes, including glaciers. Having that consistent repeat cycle was important for the approach we took to measure the movement of the glacier, using computer vision algorithms to track the movement of &lsquo;unique&rsquo; pixel patterns on the glacier between image pairs, where a longer period of time may have lost many of the pixel patterns due to surface change.</p>
+<figure>
+  <video autoplay loop muted playsinline style="width: 100%; border-radius: 4px;">
+    <source src="/images/research/tunabreen_h264.mp4" type="video/mp4">
+  </video>
+  <figcaption>Time-lapse of Tunabreen glacier</figcaption>
+</figure>
+<hr>
+<p>The second major challenge was to delineate the major crevasses on the glacier, to allow measurement of the crevasse and inter-crevasse widths. The was done using a combination of image-processing techniques, including a Lee filter and contrast enhancement, before applying a Canny edge detector using OpenCV. We wanted to pick out the major crevasses but not minor cracks and undulations on the surface.</p>
+<figure>
+  <img src="/images/research/filter.png" alt="Lee filter example" itemprop="image">
+  <figcaption>Example of Lee filter applied to a TerraSAR-X image</figcaption>
+</figure>
+<p>The main steps in the final workflow were as follows:</p>
+<ol>
+  <li>Crop image to area of interest</li>
+  <li>Apply Lee filter to remove speckle, and image enhacement to help delineate crevasse edges.</li>
+  <li>Detect crevasse edges using a Canny edge detector.</li>
+  <li>Create points along crevasse edges, and track movement of unique pixel patterns between image pairs</li>
+  <li>Calculate strain rates based on this movement, and compare 'intra-crevasse' and 'inter-crevasse' movement to assess crevasse opening/closing.</li>
+</ol>
+<figure>
+  <img src="/images/research/close.png" alt="Detected crevasse edges and extension vectors" itemprop="image">
+  <figcaption>Detected crevasse edges and extension vectors</figcaption>
+</figure>
+<figure>
+  <img src="/images/research/graphs_aug.png" alt="Output strain rate chart example" itemprop="image">
+  <figcaption>Output strain rate chart example</figcaption>
+</figure>
+<hr>
+<p>I had only started learning Python a few months earlier, but I soon found out how powerful it can be, and relatively easy to learn for someone without a background in computer science. Not only that, but the way that Python can link together so many varied pieces of software through libraries and bindings, into one easy-to-read script or program, makes it the go-to language for geoprocessing. I wanted to try and use open-source software exclusively for this project, and the main Python libraries and software I used were:</p>
+<ul>
+  <li><a href="https://gdal.org/en/stable/GDAL/OGR" target="_blank">GDAL/OGR</a> for reading and writing of raster/vector data sets</li>
+  <li><a href="https://grass.osgeo.org/" target="_blank">GRASS GIS</a> Python bindings for some vector tools to help build crevasse edges</li>
+  <li><a href="https://pyradar-tools.readthedocs.io/en/latest/" target="_blank">PyRadar</a> to filter the images</li>
+  <li><a href="https://opencv.org/" target="_blank">OpenCV</a> to apply image enhancement, edge detection and calculate movement between image pairs.</li>
+  <li><a href="https://pandas.pydata.org/" target="_blank">Pandas</a> to process and store data, and Pandas/Matplotlib to visualise results</li>
+</ul>
+<div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin: 12px 0; background: rgba(255,255,255,0.7); padding: 12px 16px; border-radius: 8px;">
+  <img src="/images/research/python.png" alt="Python" style="height: 40px;">
+  <img src="/images/research/GDALLogoColor.png" alt="GDAL" style="height: 40px;">
+  <img src="/images/research/opencv_logo_icon_170888.png" alt="OpenCV" style="height: 40px;">
+  <img src="/images/research/pyradar.png" alt="PyRadar" style="height: 40px;">
+  <img src="/images/research/grass-logo-green.png" alt="GRASS GIS" style="height: 40px;">
+  <img src="/images/research/pandas.png" alt="Pandas" style="height: 40px;">
+</div>
+<hr>
+<p>For an overview of the research and some further reading see the web showcase <a href="https://www.geos.ed.ac.uk/~mscgis/14-15/s1472101/" target="_blank">here.</a> The final research paper went on to win a UK-wide <a href="https://www.rgs.org/research/research-groups/research-group-awards-prizes-and-grants/geographical-information-science-research-group-giscrg-postgraduate-dissertation-award" target="_blank">award</a> from the Royal Geographical Society (with IBG). Feel free to get in touch for more information on the methods I used.</p>
+<p>The research paper is available on <a href="https://www.researchgate.net/publication/333564770_Automated_detection_and_tracking_of_crevasses_on_a_calving_glacier_from_TerraSAR-X_imagery" target="_blank">ResearchGate</a>.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://dunkinnear.github.io/tags/python/">Python</a></li>
+      <li><a href="https://dunkinnear.github.io/tags/masters/">Masters</a></li>
+      <li><a href="https://dunkinnear.github.io/tags/gis/">GIS</a></li>
+      <li><a href="https://dunkinnear.github.io/tags/glaciology/">Glaciology</a></li>
+      <li><a href="https://dunkinnear.github.io/tags/computer-vision/">Computer Vision</a></li>
+    </ul>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://dunkinnear.github.io/">Duncan Kinnear</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var toplink = document.getElementById("top-link");
+    window.onscroll = function () {
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
+        } else {
+            toplink.classList.add("hidden");
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
