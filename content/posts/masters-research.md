@@ -7,6 +7,7 @@ tags:
   - GIS
   - glaciology
   - computer vision
+comments: true
 cover:
   image: /images/research/20130804.png
 ---

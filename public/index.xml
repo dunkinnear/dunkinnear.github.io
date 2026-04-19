@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Duncan Kinnear</title>
-    <link>https://dunkinnear.github.io/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Duncan Kinnear</description>
     <generator>Hugo</generator>
     <language>en-AU</language>
     <lastBuildDate>Mon, 12 Mar 2018 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://dunkinnear.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Masters Research</title>
-      <link>https://dunkinnear.github.io/posts/masters-research/</link>
+      <link>http://localhost:1313/posts/masters-research/</link>
       <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
-      <guid>https://dunkinnear.github.io/posts/masters-research/</guid>
+      <guid>http://localhost:1313/posts/masters-research/</guid>
       <description>&lt;p&gt;&lt;b&gt;Automated crevasse detection on a calving glacier&lt;/b&gt;.&lt;/p&gt;
 &lt;p&gt;
 In 2015 I undertook some research for my Masters dissertation while studying GIS at the University of Edinburgh. I chose a project under the supervision of Nick Hulton, a glaciologist and Python expert. The research was closely linked to the &lt;a href=&#34;https://crios.pl/project/&#34; target=&#34;_blank&#34;&gt;CRIOS&lt;/a&gt; project (led by Prof. Doug Benn at the University Centre in Svalbard (UNIS) at the time), which was set up to investigate the use of time-lapse photography in understanding calving behaviour by deriving short-term glacier velocity fluctuations and calving rates - mainly through the use of computer vision algorithms using the &lt;a href=&#34;https://opencv.org/&#34; target=&#34;_blank&#34;&gt;OpenCV&lt;/a&gt; Python library, among others.
@@ -20,16 +20,16 @@ In 2015 I undertook some research for my Masters dissertation while studying GIS
     </item>
     <item>
       <title>About</title>
-      <link>https://dunkinnear.github.io/about/</link>
+      <link>http://localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
-      <guid>https://dunkinnear.github.io/about/</guid>
+      <guid>http://localhost:1313/about/</guid>
       <description>About Duncan Kinnear</description>
     </item>
     <item>
       <title>Contact</title>
-      <link>https://dunkinnear.github.io/contact/</link>
+      <link>http://localhost:1313/contact/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
-      <guid>https://dunkinnear.github.io/contact/</guid>
+      <guid>http://localhost:1313/contact/</guid>
       <description>Contact Duncan Kinnear</description>
     </item>
   </channel>

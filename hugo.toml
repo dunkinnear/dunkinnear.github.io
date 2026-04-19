@@ -24,6 +24,9 @@ comments = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
 
+  [params.footer]
+    text = "Comments by [Giscus](https://giscus.app/)"
+
   [params.homeInfoParams]
     Title = "Duncan Kinnear"
     Content = "Geo-data-scientist based in Perth, Australia. GIS, Maps, Data, Visualisation."
