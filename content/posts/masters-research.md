@@ -15,7 +15,13 @@ cover:
 <b>Automated crevasse detection on a calving glacier</b>.
 
 <p>
-In 2015 I undertook some research for my Masters dissertation while studying GIS at the University of Edinburgh. I chose a project under the supervision of Nick Hulton, a glaciologist and Python expert. The research was closely linked to the <a href="https://crios.pl/project/" target="_blank">CRIOS</a> project (led by Prof. Doug Benn at the University Centre in Svalbard (UNIS) at the time), which was set up to investigate the use of time-lapse photography in understanding calving behaviour by deriving short-term glacier velocity fluctuations and calving rates - mainly through the use of computer vision algorithms using the <a href="https://opencv.org/" target="_blank">OpenCV</a> Python library, among others.
+In 2015 I undertook some research for my Masters dissertation while studying GIS at the University of Edinburgh. I chose a project under the supervision of Nick Hulton, a glaciologist and Python expert. The project aim was to measure and track the relative speed of crevasse opening on Tunabreen glacier in Svalbard.
+
+<figure>
+  <img src="/images/research/Loc_map.png" alt="Location Map" itemprop="image">
+</figure>
+
+The research was closely linked to the <a href="https://crios.pl/project/" target="_blank">CRIOS</a> project (led by Prof. Doug Benn at the University Centre in Svalbard (UNIS) at the time), which was set up to investigate the use of time-lapse photography in understanding calving behaviour by deriving short-term glacier velocity fluctuations and calving rates - mainly through the use of computer vision algorithms using the <a href="https://opencv.org/" target="_blank">OpenCV</a> Python library, among others.
 </p>
 
 <figure>

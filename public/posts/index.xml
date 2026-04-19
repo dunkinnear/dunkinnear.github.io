@@ -15,8 +15,11 @@
       <guid>http://localhost:1313/posts/masters-research/</guid>
       <description>&lt;p&gt;&lt;b&gt;Automated crevasse detection on a calving glacier&lt;/b&gt;.&lt;/p&gt;
 &lt;p&gt;
-In 2015 I undertook some research for my Masters dissertation while studying GIS at the University of Edinburgh. I chose a project under the supervision of Nick Hulton, a glaciologist and Python expert. The research was closely linked to the &lt;a href=&#34;https://crios.pl/project/&#34; target=&#34;_blank&#34;&gt;CRIOS&lt;/a&gt; project (led by Prof. Doug Benn at the University Centre in Svalbard (UNIS) at the time), which was set up to investigate the use of time-lapse photography in understanding calving behaviour by deriving short-term glacier velocity fluctuations and calving rates - mainly through the use of computer vision algorithms using the &lt;a href=&#34;https://opencv.org/&#34; target=&#34;_blank&#34;&gt;OpenCV&lt;/a&gt; Python library, among others.
-&lt;/p&gt;</description>
+In 2015 I undertook some research for my Masters dissertation while studying GIS at the University of Edinburgh. I chose a project under the supervision of Nick Hulton, a glaciologist and Python expert. The project aim was to measure and track the relative speed of crevasse opening on Tunabreen glacier in Svalbard.
+&lt;figure&gt;
+  &lt;img src=&#34;http://localhost:1313/images/research/Loc_map.png&#34; alt=&#34;Location Map&#34; itemprop=&#34;image&#34;&gt;
+&lt;/figure&gt;
+&lt;p&gt;The research was closely linked to the &lt;a href=&#34;https://crios.pl/project/&#34; target=&#34;_blank&#34;&gt;CRIOS&lt;/a&gt; project (led by Prof. Doug Benn at the University Centre in Svalbard (UNIS) at the time), which was set up to investigate the use of time-lapse photography in understanding calving behaviour by deriving short-term glacier velocity fluctuations and calving rates - mainly through the use of computer vision algorithms using the &lt;a href=&#34;https://opencv.org/&#34; target=&#34;_blank&#34;&gt;OpenCV&lt;/a&gt; Python library, among others.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
